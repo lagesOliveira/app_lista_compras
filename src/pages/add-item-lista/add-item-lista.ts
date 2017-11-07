@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the AddItemListaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Item } from './../../models/item/item.module';
 
 @IonicPage()
 @Component({
@@ -14,6 +9,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'add-item-lista.html',
 })
 export class AddItemListaPage {
+
+  item: Item = {
+    nome: ' ',
+    quantidade: undefined
+  }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

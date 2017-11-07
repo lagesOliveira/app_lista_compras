@@ -16,12 +16,12 @@
 
   <ion-item>
     <ion-label>Nome</ion-label>
-    <ion-input placeholder="Macarrão"></ion-input>
+    <ion-input [(ngModel)]="item.nome" placeholder="Macarrão"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Quantidade</ion-label>
-    <ion-input type="number" placeholder="1"></ion-input>
+    <ion-input type="number" placeholder="1" [(ngModel)]="item.quantidade"></ion-input>
   </ion-item>
 
   <button ion-button block clear>Adicionar</button>
