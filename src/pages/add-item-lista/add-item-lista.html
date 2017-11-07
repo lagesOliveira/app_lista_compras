@@ -24,6 +24,6 @@
     <ion-input type="number" placeholder="1" [(ngModel)]="item.quantidade"></ion-input>
   </ion-item>
 
-  <button ion-button block clear>Adicionar</button>
+  <button ion-button block clear (click)="addItem(item)">Adicionar</button>
 
 </ion-content>
