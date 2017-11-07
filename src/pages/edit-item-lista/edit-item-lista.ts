@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { Item } from './../../models/item/item.module';
+import { ListaComprasService } from './../../services/lista-compras/lista-compras.service';
 /**
  * Generated class for the EditItemListaPage page.
  *
@@ -15,11 +17,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class EditItemListaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  item: Item;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private compras: ListaComprasService) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EditItemListaPage');
+  ionViewWillLoad() {
+    this.item = this.navParams.get('item');
+  }
+
+  saveItem(item: Item) {
+    this.compras.editItem(item)
+      .then(() => this.navCtrl.setRoot('HomePage'));
   }
 
 }

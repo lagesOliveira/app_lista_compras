@@ -5,10 +5,10 @@ import { Item } from './../../models/item/item.module';
 
 @Injectable()
 export class ListaComprasService {
-    
+
     private listaComprasRef = this.db.list<Item>('lista-compras')
 
-    constructor(private db: AngularFireDatabase) {}
+    constructor(private db: AngularFireDatabase) { }
 
     getListaCompras() {
         return this.listaComprasRef;
@@ -16,5 +16,9 @@ export class ListaComprasService {
 
     addItem(item: Item) {
         return this.listaComprasRef.push(item);
+    }
+
+    editItem(item: Item) {
+        return this.listaComprasRef.update(item.key, item);
     }
 }

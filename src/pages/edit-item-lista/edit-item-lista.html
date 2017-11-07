@@ -6,13 +6,22 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>EditItemLista</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>{{item?.nome}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input [(ngModel)]="item.nome" placeholder="Macarrão"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label>Quantidade</ion-label>
+    <ion-input type="number" placeholder="1" [(ngModel)]="item.quantidade"></ion-input>
+  </ion-item>
+
+  <button ion-button block clear (click)="saveItem(item)">Salvar</button>
 </ion-content>

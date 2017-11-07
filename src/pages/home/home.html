@@ -15,9 +15,9 @@
 
   <ion-list>
     <ion-list-header>Preciso comprar</ion-list-header>
-    <ion-item *ngFor="let item of listaCompras$ | async">
-      {{item.nome}}
-    </ion-item>
+    <button ion-item *ngFor="let item of listaCompras$ | async" navPush="EditItemListaPage" [navParams]="{item: item}">
+      {{ item.nome }}      
+    </button>
   </ion-list>
 
 </ion-content>
