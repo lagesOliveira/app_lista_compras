@@ -25,7 +25,7 @@ import { FIREBASE_CONFIG } from './firebase.configs';
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule
   ],
-  bootstrap: [IonicApp],
+  bootstrap: [ IonicApp ],
   entryComponents: [
     MyApp,
   ],
@@ -34,7 +34,7 @@ import { FIREBASE_CONFIG } from './firebase.configs';
     SplashScreen,
     ListaComprasService,
     ToastService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
-export class AppModule {}
+export class AppModule { }

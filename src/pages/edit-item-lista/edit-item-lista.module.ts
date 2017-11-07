@@ -10,4 +10,4 @@ import { EditItemListaPage } from './edit-item-lista';
     IonicPageModule.forChild(EditItemListaPage),
   ],
 })
-export class EditItemListaPageModule {}
+export class EditItemListaPageModule { }
