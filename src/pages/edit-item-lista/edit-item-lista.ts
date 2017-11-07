@@ -34,9 +34,15 @@ export class EditItemListaPage {
   saveItem(item: Item) {
     this.compras.editItem(item)
       .then(() => {
-        this.toastCtrl.show(`${item.nome} atualizado!`)
-        this.navCtrl.setRoot('HomePage')
+        this.toastCtrl.show(`${item.nome} atualizado!`);
+        this.navCtrl.setRoot('HomePage');
       });
   }
-
+  removeItem(item: Item) {
+    this.compras.removeItem(item)
+      .then(() => {
+        this.toastCtrl.show(`${item.nome} foi apagado!`);
+        this.navCtrl.setRoot('HomePage');
+      })
+  }
 }

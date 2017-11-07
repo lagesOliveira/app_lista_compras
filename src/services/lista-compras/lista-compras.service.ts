@@ -21,4 +21,8 @@ export class ListaComprasService {
     editItem(item: Item) {
         return this.listaComprasRef.update(item.key, item);
     }
+
+    removeItem(item: Item) {
+        return this.listaComprasRef.remove(item.key);
+    }
 }
